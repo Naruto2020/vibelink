@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: vibelink-postgres
+    restart: always
+    environment:
+      POSTGRES_USER: v_user
+      POSTGRES_PASSWORD: v_password
+      POSTGRES_DB: vibelink
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:

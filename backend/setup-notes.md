@@ -1,0 +1,8 @@
+- Debian WSL2 installé
+- Docker Desktop configuré avec WSL Integration
+- PostgreSQL lancé via docker-compose
+- FastAPI installé dans .venv
+- Connexion SQLAlchemy ↔ PostgreSQL Docker validée
+- PostgreSQL local Windows désactivé pour éviter le conflit de port 5432
+- PostgreSQL utilisé via Docker (postgres:16)
+- PGAdmin configuré comme client graphique du PostgreSQL Docker
