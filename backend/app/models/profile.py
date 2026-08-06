@@ -57,3 +57,8 @@ class Profile(Base):
     user: Mapped["User"] = relationship(
         back_populates="profile"
     )
+
+    photos: Mapped[list["ProfilePhoto"]] = relationship(
+        back_populates="profile",
+        cascade="all, delete-orphan"
+    )
