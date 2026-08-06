@@ -44,3 +44,8 @@ class User(Base):
         back_populates="user",
         uselist=False
     )
+
+    match_preferences: Mapped["MatchPreference"] = relationship(
+        back_populates="user",
+        uselist=False
+    )
