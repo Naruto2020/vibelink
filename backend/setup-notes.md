@@ -6,3 +6,4 @@
 - PostgreSQL local Windows désactivé pour éviter le conflit de port 5432
 - PostgreSQL utilisé via Docker (postgres:16)
 - PGAdmin configuré comme client graphique du PostgreSQL Docker
+- configuration GitHub ajout clé SSH et premier git push 
