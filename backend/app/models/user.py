@@ -89,3 +89,11 @@ class User(Base):
     match_blocks: Mapped[list["MatchBlock"]] = relationship(
         back_populates="blocked_by_user"
     )
+
+    messages: Mapped[list["Message"]] = relationship(
+        back_populates="sender"
+    )
+
+    notifications: Mapped[list["Notification"]] = relationship(
+        back_populates="user"
+    )

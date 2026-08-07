@@ -9,3 +9,5 @@ from app.models.like import Like
 from app.models.match import Match
 from app.models.conversation import Conversation
 from app.models.match_block import MatchBlock
+from app.models.message import Message
+from app.models.notification import Notification
