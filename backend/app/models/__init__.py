@@ -6,3 +6,4 @@ from app.models.venue import Venue
 from app.models.venue_session import VenueSession
 from app.models.venue_session_participant import VenueSessionParticipant
 from app.models.like import Like
+from app.models.match import Match

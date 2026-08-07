@@ -74,3 +74,14 @@ class User(Base):
         foreign_keys="Like.receiver_id",
         back_populates="receiver"
     )
+
+    matches_as_user_one: Mapped[list["Match"]] = relationship(
+        foreign_keys="Match.user_one_id",
+        back_populates="user_one"
+    )
+
+
+    matches_as_user_two: Mapped[list["Match"]] = relationship(
+        foreign_keys="Match.user_two_id",
+        back_populates="user_two"
+    )
