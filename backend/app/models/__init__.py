@@ -5,3 +5,4 @@ from app.models.match_preference import MatchPreference
 from app.models.venue import Venue
 from app.models.venue_session import VenueSession
 from app.models.venue_session_participant import VenueSessionParticipant
+from app.models.like import Like

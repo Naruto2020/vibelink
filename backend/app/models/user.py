@@ -64,3 +64,13 @@ class User(Base):
     venue_session_participations: Mapped[list["VenueSessionParticipant"]] = relationship(
         back_populates="user"
     )
+
+    sent_likes: Mapped[list["Like"]] = relationship(
+        foreign_keys="Like.sender_id",
+        back_populates="sender"
+    )
+
+    received_likes: Mapped[list["Like"]] = relationship(
+        foreign_keys="Like.receiver_id",
+        back_populates="receiver"
+    )
