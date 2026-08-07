@@ -11,3 +11,4 @@ from app.models.conversation import Conversation
 from app.models.match_block import MatchBlock
 from app.models.message import Message
 from app.models.notification import Notification
+from app.models.match_meeting import MatchMeeting

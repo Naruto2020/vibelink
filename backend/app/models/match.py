@@ -89,3 +89,7 @@ class Match(Base):
     blocks: Mapped[list["MatchBlock"]] = relationship(
         back_populates="match"
     )
+
+    meeting_confirmations: Mapped[list["MatchMeeting"]] = relationship(
+        back_populates="match"
+    )

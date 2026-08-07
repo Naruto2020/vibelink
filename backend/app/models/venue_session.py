@@ -76,3 +76,7 @@ class VenueSession(Base):
     participants: Mapped[list["VenueSessionParticipant"]] = relationship(
         back_populates="venue_session"
     )
+
+    meeting_confirmations: Mapped[list["MatchMeeting"]] = relationship(
+        back_populates="venue_session"
+    )
