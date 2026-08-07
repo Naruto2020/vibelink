@@ -6,6 +6,11 @@ from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from app.db.base import Base
 
+from typing import TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from app.models.venue_session_participant import VenueSessionParticipant
+
 
 class User(Base):
     __tablename__ = "users"
@@ -20,6 +25,12 @@ class User(Base):
         unique=True,
         nullable=False,
         index=True
+    )
+
+    role: Mapped[str] = mapped_column(
+        String(20),
+        nullable=False,
+        default="USER"
     )
 
     password_hash: Mapped[str] = mapped_column(
@@ -48,4 +59,8 @@ class User(Base):
     match_preferences: Mapped["MatchPreference"] = relationship(
         back_populates="user",
         uselist=False
+    )
+
+    venue_session_participations: Mapped[list["VenueSessionParticipant"]] = relationship(
+        back_populates="user"
     )
