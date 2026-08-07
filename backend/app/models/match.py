@@ -80,3 +80,8 @@ class Match(Base):
         foreign_keys=[user_two_id],
         back_populates="matches_as_user_two"
     )
+
+    conversation: Mapped["Conversation"] = relationship(
+        back_populates="match",
+        uselist=False
+    )
