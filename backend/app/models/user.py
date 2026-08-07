@@ -85,3 +85,7 @@ class User(Base):
         foreign_keys="Match.user_two_id",
         back_populates="user_two"
     )
+
+    match_blocks: Mapped[list["MatchBlock"]] = relationship(
+        back_populates="blocked_by_user"
+    )

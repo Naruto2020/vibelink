@@ -8,3 +8,4 @@ from app.models.venue_session_participant import VenueSessionParticipant
 from app.models.like import Like
 from app.models.match import Match
 from app.models.conversation import Conversation
+from app.models.match_block import MatchBlock

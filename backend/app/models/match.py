@@ -85,3 +85,7 @@ class Match(Base):
         back_populates="match",
         uselist=False
     )
+
+    blocks: Mapped[list["MatchBlock"]] = relationship(
+        back_populates="match"
+    )
